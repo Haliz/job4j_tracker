@@ -1,25 +1,25 @@
 package ru.job4j.oop;
 
 public class Jukebox {
-    public void music(String lyrics) {
-        System.out.println("I can sign a song : " + lyrics);
+    public void music(int position) {
+        if (position == 1){
+            System.out.println("Пусть бегут неуклюже");
+        }
+        else if (position == 2) {
+            System.out.println("Спокойной ночи");
+        }
+        else {
+            System.out.println("Песня не найдена");
+        }
     }
 
     public static void main(String[] args) {
-        Jukebox petya = new Jukebox();
-        for (int i = 1; i <= 3; i++) {
-            String song;
-            if (i == 1){
-                song = "Пусть бегут неуклюже";
-            }
-            else if (i == 2) {
-                song = "Спокойной ночи";
-            }
-            else {
-                song = "Песня не найдена";
-            }
-            petya.music(song);
-            System.out.println();
-        }
+        Jukebox sound1 = new Jukebox();
+        sound1.music (1);
+        Jukebox sound2 = new Jukebox();
+        sound2.music (2);
+        Jukebox sound3 = new Jukebox();
+        sound3.music (3);
+
     }
 }
