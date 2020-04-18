@@ -10,6 +10,6 @@ public class Surgeon extends Doctor {
         this.dead = dead;
     }
 
-    public Diagnose heal(Patient pacient) { }
+   // public Diagnose heal(Patient pacient) { }
 }
 
