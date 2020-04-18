@@ -10,6 +10,6 @@ public class Dentist extends Doctor {
         this.complaint = complaint;
     }
 
-    public Diagnose heal(Patient pacient) { }
+    //public Diagnose heal(Patient pacient) { }
 }
 
