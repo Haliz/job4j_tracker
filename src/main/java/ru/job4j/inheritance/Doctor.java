@@ -7,5 +7,5 @@ public class Doctor extends Profession {
         super(name, surname, education, birthday);
         this.category = category;
     }
-    public Diagnose diagnostics(String illness, String analyzes, String inspection) {   }
+    // public Diagnose diagnostics(String illness, String analyzes, String inspection) {   }
 }
