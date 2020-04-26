@@ -51,8 +51,12 @@ public class Tracker {
     }
     public void replace(String id, Item item) {
         int index = indexOf(id);
-        item.setId(id);
-        items[index] = item;
+        if(index == -1) {
+            System.out.println("Wrong ID, item not found.");
+        } else {
+            item.setId(id);
+            items[index] = item;
+        }
     }
 
     private int indexOf(String id) {
@@ -68,10 +72,14 @@ public class Tracker {
 
     public void delete(String id) {
         int index = indexOf(id);
-        int start = index + 1;
-        int size = this.size - start;
-        System.arraycopy(items, start, items, index, size);
-        items[this.size - 1] = null;
-        this.size--;
+        if(index == -1) {
+            System.out.println("Wrong ID, item not found.");
+        } else {
+            int start = index + 1;
+            int size = this.size - start;
+            System.arraycopy(items, start, items, index, size);
+            items[this.size - 1] = null;
+            this.size--;
+        }
     }
 }
