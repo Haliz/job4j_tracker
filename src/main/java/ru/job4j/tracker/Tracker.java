@@ -39,14 +39,14 @@ public class Tracker {
         foundName = Arrays.copyOf(foundName, indexFoundName);
         return foundName;
     }
-    public void replace(String id, Item item) {
+    public boolean replace(String id, Item item) {
         int index = indexOf(id);
-        if(index == -1) {
-            System.out.println("Wrong ID, item not found.");
-        } else {
+        boolean rls = index != -1;
+        if(rls) {
             item.setId(id);
             items[index] = item;
         }
+        return rls;
     }
 
     private int indexOf(String id) {
@@ -60,16 +60,16 @@ public class Tracker {
         return rsl;
     }
 
-    public void delete(String id) {
+    public boolean delete(String id) {
         int index = indexOf(id);
-        if(index == -1) {
-            System.out.println("Wrong ID, item not found.");
-        } else {
+        boolean rls = index != -1;
+        if(rls) {
             int start = index + 1;
             int size = this.size - start;
             System.arraycopy(items, start, items, index, size);
             items[this.size - 1] = null;
             this.size--;
         }
+        return rls;
     }
 }
