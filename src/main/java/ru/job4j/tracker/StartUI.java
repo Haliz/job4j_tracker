@@ -19,7 +19,10 @@ public class StartUI {
             } else if (select == 1) {
                 System.out.println("=== All Items ====");
                 for (Item foundItems : tracker.findAll()) {
-                    System.out.println("ID " + foundItems.getId() + " - " + foundItems.getName());
+                    System.out.println(foundItems);
+                    /* System.out.println("ID " + foundItems.getId() + " - " + foundItems.getName());
+                    переопределено строкой выше (метод toString() в классе Item)
+                    */
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit Item ====");
@@ -52,7 +55,10 @@ public class StartUI {
                 if (foundItem == null) {
                     System.out.println("Item not found");
                 } else {
-                    System.out.println("ID " + foundItem.getId() + " - " + foundItem.getName());
+                    System.out.println(foundItem);
+                   /* System.out.println("ID " + foundItem.getId() + " - " + foundItem.getName());
+                   переопределено строкой выше (метод toString() в классе Item)
+                    */
                 }
             } else if (select == 5) {
                 System.out.println("=== Find Item by name ====");
@@ -63,7 +69,8 @@ public class StartUI {
                     System.out.println("Items not found");
                 } else {
                     for (Item foundItems : found) {
-                        System.out.println("ID " + foundItems.getId() + " - " + foundItems.getName());
+                        System.out.println(foundItems);
+                       // System.out.println("ID " + foundItems.getId() + " - " + foundItems.getName());
                     }
                 }
             } else if (select == 6) {
