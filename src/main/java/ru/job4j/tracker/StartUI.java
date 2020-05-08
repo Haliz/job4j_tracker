@@ -18,16 +18,12 @@ public class StartUI {
                 System.out.println("=== All Items ====");
                 for (Item foundItems : tracker.findAll()) {
                     System.out.println(foundItems);
-                    /* System.out.println("ID " + foundItems.getId() + " - " + foundItems.getName());
-                    переопределено строкой выше (метод toString() в классе Item)
-                    */
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit Item ====");
                 String selectID = input.askStr("Enter ID: ");
                 String name = input.askStr("Enter name: ");
                 Item item = new Item(name);
-                tracker.replace(selectID, item);
                 if (tracker.replace(selectID, item)) {
                     System.out.println("Item replaced");
                 } else {
@@ -50,9 +46,6 @@ public class StartUI {
                     System.out.println("Item not found");
                 } else {
                     System.out.println(foundItem);
-                   /* System.out.println("ID " + foundItem.getId() + " - " + foundItem.getName());
-                   переопределено строкой выше (метод toString() в классе Item)
-                    */
                 }
             } else if (select == 5) {
                 System.out.println("=== Find Item by name ====");
@@ -63,7 +56,6 @@ public class StartUI {
                 } else {
                     for (Item foundItems : found) {
                         System.out.println(foundItems);
-                       // System.out.println("ID " + foundItems.getId() + " - " + foundItems.getName());
                     }
                 }
             } else if (select == 6) {
