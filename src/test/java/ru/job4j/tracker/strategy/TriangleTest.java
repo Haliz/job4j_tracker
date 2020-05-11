@@ -18,7 +18,6 @@ public class TriangleTest {
                                 .add("  +   +  ")
                                 .add(" +     + ")
                                 .add("+ + + + +")
-                                .add(System.lineSeparator())
                                 .toString()
                 )
         );
