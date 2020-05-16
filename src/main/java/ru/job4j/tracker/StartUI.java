@@ -9,7 +9,6 @@ public class StartUI {
             int select = input.askInt("Select: ");
             UserAction action = actions[select];
             run = action.execute(input, tracker);
-            System.out.println();
         }
     }
 
