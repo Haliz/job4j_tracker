@@ -16,11 +16,11 @@ public class UserStore {
     }
 
         public static boolean validate(User user) throws UserInvalidException {
-            if (user.isValid() && user.getUsername().length() > 2) {
+            if (user.getUsername().length() <= 2) {
+                throw new UserInvalidException("The username too short");
+            } else  if (user.isValid()) {
                 return true;
-            } else {
-                throw new UserInvalidException("Invalid user");
-            }
+            } else throw new UserInvalidException("Invalid user");
         }
 
     public static void main(String[] args) {
