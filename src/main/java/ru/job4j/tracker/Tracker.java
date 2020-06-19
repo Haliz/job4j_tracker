@@ -38,7 +38,7 @@ public class Tracker {
     public boolean replace(String id, Item item) {
         int index = indexOf(id);
         boolean rls = index != -1;
-        if(rls) {
+        if (rls) {
             item.setId(id);
             items.set(index, item);
         }
@@ -47,9 +47,9 @@ public class Tracker {
 
     private int indexOf(String id) {
         int rsl = -1;
-        for (Item search : items ) {
-            if (search.getId().equals(id)) {
-                rsl = items.indexOf(search);
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId().equals(id)) {
+                rsl = index;
                 break;
             }
         }
@@ -59,7 +59,7 @@ public class Tracker {
     public boolean delete(String id) {
         int index = indexOf(id);
         boolean rls = index != -1;
-        if(rls) {
+        if (rls) {
             items.remove(index);
         }
         return rls;
