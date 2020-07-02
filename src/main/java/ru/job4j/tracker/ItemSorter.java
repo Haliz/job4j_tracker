@@ -7,11 +7,11 @@ import java.util.List;
 public class ItemSorter {
 
     public static void sortId(List<Item> items) {
-        Collections.sort(items);
+        items.sort(new SortByIdItem());
     }
 
     public static void sortIdRevers(List<Item> items) {
-        items.sort(Collections.reverseOrder());
+        items.sort(new SortByIdItemRevers());
     }
 
     public static void sortName(List<Item> items) {
