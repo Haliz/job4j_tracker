@@ -7,7 +7,7 @@ public class Diagnose {
     private String therapy;
     private String result;
 
-    public Diagnose (String illness, String analyzes, String inspection) {
+    public Diagnose(String illness, String analyzes, String inspection) {
         this.illness = illness;
         this.analyzes = analyzes;
         this.inspection = inspection;

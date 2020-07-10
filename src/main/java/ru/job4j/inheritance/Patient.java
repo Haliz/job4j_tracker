@@ -6,7 +6,7 @@ public class Patient {
     private String birthday;
     private Diagnose diagnose;
 
-    public Patient (String name, String surname, String education, String birthday) {
+    public Patient(String name, String surname, String education, String birthday) {
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;

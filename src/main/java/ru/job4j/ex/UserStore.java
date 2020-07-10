@@ -20,7 +20,9 @@ public class UserStore {
                 throw new UserInvalidException("The username too short");
             } else  if (user.isValid()) {
                 return true;
-            } else throw new UserInvalidException("Invalid user");
+            } else {
+                throw new UserInvalidException("Invalid user");
+            }
         }
 
     public static void main(String[] args) {

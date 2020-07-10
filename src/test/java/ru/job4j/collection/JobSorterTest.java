@@ -14,7 +14,7 @@ public class JobSorterTest {
         JobByName comp = new JobByName();
         Job job1 = new Job("Read", 1);
         Job job2 = new Job("Debug", 2);
-        assertThat(comp.compare(job1, job2),greaterThan(0));
+        assertThat(comp.compare(job1, job2), greaterThan(0));
     }
 
     @Test
@@ -22,7 +22,7 @@ public class JobSorterTest {
         JobByNameRevers comp = new JobByNameRevers();
         Job job1 = new Job("Read", 1);
         Job job2 = new Job("Debug", 2);
-        assertThat(comp.compare(job1, job2),lessThan(0));
+        assertThat(comp.compare(job1, job2), lessThan(0));
     }
 
     @Test
@@ -30,14 +30,14 @@ public class JobSorterTest {
         JobByPriority comp = new JobByPriority();
         Job job1 = new Job("Read", 1);
         Job job2 = new Job("Debug", 2);
-        assertThat(comp.compare(job1, job2),lessThan(0));
+        assertThat(comp.compare(job1, job2), lessThan(0));
     }
     @Test
     public void sortByPriorityRevers() {
         JobByPriorityRevers comp = new JobByPriorityRevers();
         Job job1 = new Job("Read", 1);
         Job job2 = new Job("Debug", 2);
-        assertThat(comp.compare(job1, job2),greaterThan(0));
+        assertThat(comp.compare(job1, job2), greaterThan(0));
     }
 
     @Test

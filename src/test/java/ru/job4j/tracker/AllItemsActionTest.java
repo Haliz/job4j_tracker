@@ -21,7 +21,7 @@ public class AllItemsActionTest {
         act.execute(new StubInput(new String[] {}), tracker);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("=== All Items ====")
-                .add("Item{id ='" + item.getId() + "', name ='"+ item.getName() +"'}")
+                .add("Item{id ='" + item.getId() + "', name ='" + item.getName() + "'}")
                 .toString();
         assertThat(new String(out.toByteArray()), is(expect));
         System.setOut(def);

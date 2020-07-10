@@ -23,7 +23,7 @@ public class MachineTest {
     @Test
     public void when50by37() {
         Machine machine = new Machine();
-        int[] expected = {10,2,1};
+        int[] expected = {10, 2, 1};
         int[] rsl = machine.change(50, 37);
         assertThat(rsl, is(expected));
     }
@@ -31,7 +31,7 @@ public class MachineTest {
     @Test
     public void when50by1() {
         Machine machine = new Machine();
-        int[] expected = {10,10,10,10,5,2,2};
+        int[] expected = {10, 10, 10, 10, 5, 2, 2};
         int[] rsl = machine.change(50, 1);
         assertThat(rsl, is(expected));
     }

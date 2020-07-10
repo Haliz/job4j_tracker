@@ -4,7 +4,7 @@ public interface Transport {
 
     void go();
 
-    void passengers (int numPassengers);
+    void passengers(int numPassengers);
 
-    double toFill (int fuel);
+    double toFill(int fuel);
 }

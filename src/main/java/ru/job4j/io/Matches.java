@@ -10,7 +10,7 @@ public class Matches {
         int takeMatches;
         boolean player;
         do {
-            player = index%2 == 0;
+            player = index % 2 == 0;
             System.out.println("Количество спичек на столе - " + matches);
             do {
                 if (player) {

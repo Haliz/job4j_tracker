@@ -6,7 +6,7 @@ public class Predator extends Animal {
         System.out.println("load Predator");
     }
 
-    public Predator (String name) {
+    public Predator(String name) {
         super(name);
     }
 
