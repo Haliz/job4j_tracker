@@ -9,26 +9,16 @@ public class AttachmentSort {
         List<Attachment> attachments = Arrays.asList(
                 new Attachment("image 1", 100),
                 new Attachment("image 2", 34),
-                new Attachment("image 3", 13)
+                new Attachment("image 3", 40)
         );
-        Comparator comparator =  new Comparator() {
-            @Override
-            public int compare(Object o1, Object o2) {
-                Attachment left = (Attachment) o1;
-                Attachment right = (Attachment) o2;
-                return left.getSize() - right.getSize();
-            }
+        Comparator comparator = (o1, o2) -> {
+            Attachment left = (Attachment) o1;
+            Attachment right = (Attachment) o2;
+            return right.getSize() - left.getSize();
         };
         attachments.sort(comparator);
         System.out.println(attachments);
-        Comparator comparatorName =  new Comparator<Attachment>() {
-            @Override
-            public int compare(Attachment o1, Attachment o2) {
-                Attachment left = o1;
-                Attachment right = o2;
-                return left.getName().compareTo(right.getName());
-            }
-        };
+        Comparator<Attachment> comparatorName = (o1, o2) -> o2.getName().compareTo(o1.getName());
         attachments.sort(comparatorName);
         System.out.println();
         System.out.println(attachments);
