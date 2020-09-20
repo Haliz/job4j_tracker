@@ -1,4 +1,6 @@
-package ru.job4j.stream;
+package ru.job4j.sort;
+
+import ru.job4j.stream.Address;
 
 import java.util.Comparator;
 
