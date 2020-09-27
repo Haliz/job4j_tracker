@@ -1,6 +1,7 @@
 package ru.job4j.stream;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -26,5 +27,10 @@ public class School {
         Predicate<Student> predicate = student -> student.getScore() > 0
                 && student.getScore() < 50;
         return School.collect(students,predicate);
+    }
+
+    public static Map<String, Student> listOfStudentToMap(List<Student> students) {
+        return students.stream()
+                .collect(Collectors.toMap(Student::getSurname, e -> e));
     }
 }
