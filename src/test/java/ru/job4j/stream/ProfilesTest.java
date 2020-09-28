@@ -14,10 +14,10 @@ public class ProfilesTest {
 
     @Test
     public void listAddressByCity() {
-        Address address1 = new Address( "Москва", "Тверская", 10, 1);
-        Address address2 = new Address( "Люберцы", "Смирновская", 5, 10);
-        Address address3 = new Address( "Воронеж", "Лизюкова", 12, 5);
-        Address address4 = new Address( "Москва", "Тверская", 10, 2);
+        Address address1 = new Address("Москва", "Тверская", 10, 1);
+        Address address2 = new Address("Люберцы", "Смирновская", 5, 10);
+        Address address3 = new Address("Воронеж", "Лизюкова", 12, 5);
+        Address address4 = new Address("Москва", "Тверская", 10, 2);
         Profile profile1 = new Profile(address1);
         Profile profile2 = new Profile(address2);
         Profile profile3 = new Profile(address3);
