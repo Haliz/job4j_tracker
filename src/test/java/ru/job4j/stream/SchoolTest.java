@@ -15,11 +15,11 @@ public class SchoolTest {
         Student student3 = new Student( "Marya", 100);
         Student student4 = new Student( "Ivan", 30);
         Student student5 = new Student( "Dimon", 20);
-        List<Student> students = new ArrayList<>();
+        List <Student> students = new ArrayList<>();
         Collections.addAll(students, student1, student2, student3,
                 student4, student5);
-        List<Student> result = School.group10A(students);
-        List<Student> expected = Arrays.asList(student2, student3);
+        List <Student> result = School.group10A(students);
+        List <Student> expected = Arrays.asList(student2, student3);
         assertThat(result, is(expected));
     }
 
@@ -30,11 +30,11 @@ public class SchoolTest {
         Student student3 = new Student( "Marya", 100);
         Student student4 = new Student( "Ivan", 30);
         Student student5 = new Student( "Dimon", 20);
-        List<Student> students = new ArrayList<>();
+        List <Student> students = new ArrayList<>();
         Collections.addAll(students, student1, student2, student3,
                 student4, student5);
-        List<Student> result = School.group10B(students);
-        List<Student> expected = Arrays.asList(student1);
+        List <Student> result = School.group10B(students);
+        List <Student> expected = Arrays.asList(student1);
         assertThat(result, is(expected));
     }
 
@@ -45,11 +45,11 @@ public class SchoolTest {
         Student student3 = new Student( "Marya", 100);
         Student student4 = new Student( "Ivan", 30);
         Student student5 = new Student( "Dimon", 20);
-        List<Student> students = new ArrayList<>();
+        List <Student> students = new ArrayList<>();
         Collections.addAll(students, student1, student2, student3,
                 student4, student5);
-        List<Student> result = School.group10V(students);
-        List<Student> expected = Arrays.asList(student4, student5);
+        List <Student> result = School.group10V(students);
+        List <Student> expected = Arrays.asList(student4, student5);
         assertThat(result, is(expected));
     }
 
