@@ -54,7 +54,7 @@ public class SchoolTest {
     }
 
     @Test
-    public void ListToMap() {
+    public void listToMap() {
         Student student1 = new Student("Garry", 50);
         Student student2 = new Student("Mikael", 80);
         Student student3 = new Student("Marya", 100);
