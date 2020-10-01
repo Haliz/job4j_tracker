@@ -19,7 +19,7 @@ public class SchoolTest {
         Collections.addAll(students, student1, student2, student3,
                 student4, student5);
         List<Student> result = School.group10A(students);
-        List<Student> expected = Arrays.asList(student2, student3);
+        List<Student> expected = List.of(student2, student3);
         assertThat(result, is(expected));
     }
 
@@ -34,7 +34,7 @@ public class SchoolTest {
         Collections.addAll(students, student1, student2, student3,
                 student4, student5);
         List<Student> result = School.group10B(students);
-        List<Student> expected = Arrays.asList(student1);
+        List<Student> expected = List.of(student1);
         assertThat(result, is(expected));
     }
 
@@ -49,7 +49,7 @@ public class SchoolTest {
         Collections.addAll(students, student1, student2, student3,
                 student4, student5);
         List<Student> result = School.group10V(students);
-        List<Student> expected = Arrays.asList(student4, student5);
+        List<Student> expected = List.of(student4, student5);
         assertThat(result, is(expected));
     }
 

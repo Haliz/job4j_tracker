@@ -46,7 +46,7 @@ public class JobSorterTest {
         Job job2 = new Job("Debug", 2);
         Job job3 = new Job("Write", 3);
         List<Job> jobs = Arrays.asList(job1, job2, job3);
-        List<Job> exp = Arrays.asList(job2, job1, job3);
+        List<Job> exp = List.of(job2, job1, job3);
         JobSorter.byNameAndPriorityRise(jobs);
         assertThat(exp, is(jobs));
     }
@@ -57,7 +57,7 @@ public class JobSorterTest {
         Job job2 = new Job("Debug", 2);
         Job job3 = new Job("Write", 3);
         List<Job> jobs = Arrays.asList(job1, job2, job3);
-        List<Job> exp = Arrays.asList(job2, job3, job1);
+        List<Job> exp = List.of(job2, job3, job1);
         JobSorter.byNameAndPriorityDecrease(jobs);
         assertThat(exp, is(jobs));
     }
@@ -68,7 +68,7 @@ public class JobSorterTest {
         Job job2 = new Job("Debug", 1);
         Job job3 = new Job("Write", 3);
         List<Job> jobs = Arrays.asList(job1, job2, job3);
-        List<Job> exp = Arrays.asList(job2, job1, job3);
+        List<Job> exp = List.of(job2, job1, job3);
         JobSorter.byPriorityAndNameRise(jobs);
         assertThat(exp, is(jobs));
     }
@@ -79,7 +79,7 @@ public class JobSorterTest {
         Job job2 = new Job("Debug", 1);
         Job job3 = new Job("Write", 1);
         List<Job> jobs = Arrays.asList(job1, job2, job3);
-        List<Job> exp = Arrays.asList(job3, job2, job1);
+        List<Job> exp = List.of(job3, job2, job1);
         JobSorter.byPriorityAndNameDecrease(jobs);
         assertThat(exp, is(jobs));
     }

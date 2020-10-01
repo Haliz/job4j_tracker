@@ -15,7 +15,7 @@ public class IntegerListTest {
                 {3, 4, 5},
                 {6, 7, 8}
         };
-        List<Integer> expected = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8);
+        List<Integer> expected = List.of(0, 1, 2, 3, 4, 5, 6, 7, 8);
         List<Integer> result = IntegerList.collect(matrix);
         assertThat(result, is(expected));
     }

@@ -29,7 +29,7 @@ public class TrackerTest {
         tracker.add(item2);
         Item item3 = new Item("Вася");
         tracker.add(item3);
-        List<Item> exp = Arrays.asList(item1, item2, item3);
+        List<Item> exp = List.of(item1, item2, item3);
         assertThat(exp, is(tracker.findAll()));
     }
 

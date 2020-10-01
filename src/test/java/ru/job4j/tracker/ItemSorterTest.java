@@ -16,7 +16,7 @@ public class ItemSorterTest {
         Item item3 = new Item("Pen", "2");
         Item item4 = new Item("Apple", "3");
         List<Item> items = Arrays.asList(item1, item2, item3, item4);
-        List<Item> exp = Arrays.asList(item2, item3, item4, item1);
+        List<Item> exp = List.of(item2, item3, item4, item1);
         ItemSorter.sortId(items);
         assertThat(exp, is(items));
     }
@@ -27,7 +27,7 @@ public class ItemSorterTest {
         Item item3 = new Item("Pen", "2");
         Item item4 = new Item("Apple", "3");
         List<Item> items = Arrays.asList(item1, item2, item3, item4);
-        List<Item> exp = Arrays.asList(item1, item4, item3, item2);
+        List<Item> exp = List.of(item1, item4, item3, item2);
         ItemSorter.sortIdRevers(items);
         assertThat(exp, is(items));
     }
@@ -39,7 +39,7 @@ public class ItemSorterTest {
         Item item3 = new Item("Pen", "2");
         Item item4 = new Item("Apple", "3");
         List<Item> items = Arrays.asList(item1, item2, item3, item4);
-        List<Item> exp = Arrays.asList(item4, item1, item2, item3);
+        List<Item> exp = List.of(item4, item1, item2, item3);
         ItemSorter.sortName(items);
         assertThat(exp, is(items));
     }
@@ -51,7 +51,7 @@ public class ItemSorterTest {
         Item item3 = new Item("Pen", "2");
         Item item4 = new Item("Apple", "3");
         List<Item> items = Arrays.asList(item1, item2, item3, item4);
-        List<Item> exp = Arrays.asList(item3, item2, item1, item4);
+        List<Item> exp = List.of(item3, item2, item1, item4);
         ItemSorter.sortNameRevers(items);
         assertThat(exp, is(items));
     }
