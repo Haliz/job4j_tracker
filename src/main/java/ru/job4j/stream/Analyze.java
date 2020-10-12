@@ -37,7 +37,7 @@ public class Analyze {
         return stream.map(pupil -> new Tuple(pupil.getName(), (pupil.getSubjects().stream()
                 .mapToInt(Subject::getScore)
                 .sum())))
-                .max(Comparator.comparingInt(o -> (int) o.getScore()))
+                .max(Comparator.comparingDouble(Tuple::getScore))
                 .orElse(null);
     }
 
@@ -47,7 +47,7 @@ public class Analyze {
                 .entrySet()
                 .stream()
                 .map(tuple -> new Tuple(tuple.getKey(), tuple.getValue()))
-                .max(Comparator.comparingInt(o -> (int) o.getScore()))
+                .max(Comparator.comparingDouble(Tuple::getScore))
                 .orElse(null);
     }
 }
