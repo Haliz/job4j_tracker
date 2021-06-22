@@ -51,7 +51,7 @@ public class EasyStreamTest {
                 .map(e -> e * 2)
                 .filter(e -> e == 2)
                 .collect();
-        assertThat(rsl, is(List.of(4)));
+        assertThat(rsl, is(List.of(2)));
     }
 
     @Test
