@@ -7,9 +7,9 @@ public class AllItemsAction implements UserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(Input input, Store memTracker) {
         System.out.println("=== All Items ====");
-        for (Item foundItems : tracker.findAll()) {
+        for (Item foundItems : memTracker.findAll()) {
             System.out.println(foundItems);
         }
         return true;

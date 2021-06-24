@@ -7,11 +7,11 @@ public class ReplaceAction implements UserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(Input input, Store memTracker) {
         String selectID = input.askStr("Enter ID: ");
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
-        if (tracker.replace(selectID, item)) {
+        if (memTracker.replace(Integer.parseInt(selectID), item)) {
             System.out.println("Item replaced");
         } else {
             System.out.println("Error: Can not replace Item");

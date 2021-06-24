@@ -7,9 +7,9 @@ public class FindItemIDAction implements UserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(Input input, Store memTracker) {
         String selectID = input.askStr("Enter ID: ");
-        Item foundItem = tracker.findById(selectID);
+        Item foundItem = memTracker.findById(Integer.parseInt(selectID));
         if (foundItem == null) {
             System.out.println("Item not found");
         } else {
