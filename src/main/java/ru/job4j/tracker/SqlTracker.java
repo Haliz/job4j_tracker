@@ -9,6 +9,13 @@ import java.util.Properties;
 public class SqlTracker implements Store {
     private Connection cn;
 
+    public SqlTracker() {
+    }
+
+    public SqlTracker(Connection cn) {
+        this.cn = cn;
+    }
+
     public void init() {
         try (InputStream in = SqlTracker.class.getClassLoader().getResourceAsStream("app.properties")) {
             Properties config = new Properties();

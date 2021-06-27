@@ -1,11 +1,8 @@
-package ru.job4j.tracker.strategy;
+package ru.job4j.strategy;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import ru.job4j.strategy.Paint;
-import ru.job4j.strategy.Square;
-import ru.job4j.strategy.Triangle;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
