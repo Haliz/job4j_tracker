@@ -132,9 +132,6 @@
         </profile>
         <profile>
             <id>travis</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <db.url>jdbc:postgresql://localhost/tracker</db.url>
                 <db.username>postgres</db.username>
